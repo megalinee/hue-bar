@@ -1,6 +1,5 @@
 # hue-bar
-This is a Rofi-based Philips Hue light controller
-Intended for use with Polybar but can be used with anything that can integerate Rofi
+hue-bar is a Rofi-based Philips Hue light controller intended for use with Rofi.
 
 ![alt text](rofi-view.png)
 
@@ -10,21 +9,24 @@ Intended for use with Polybar but can be used with anything that can integerate 
 - Rofi
 - Python 3.3+
   - rofi_menu
+  
 You can simply install the python dependencies by typing:
 `pip install rofi_menu`
 
-### Setting up hue.py
-To get the proper API keys you must go to the following link and make an account:
+### Setting Up hue.py
+To get the proper API keys you must go to the following link and make an account:<br />
 https://developers.meethue.com/develop/hue-api-v2/getting-started/
-Once you've made an account follow along the steps to get your Hue bridge IP & username
+
+Once you've made an account follow along the steps on the website to get your Hue bridge IP & username.
 Paste these values into the matching variables at the top of the hue.py file
-Your room name will be the same name as what you set it on your other devices, its also case sensitive
+
+Your room name will be the same name as what you set it on your other devices
 
 ### Polybar Config
-Paste this in your config.ini file
+Paste this in your config.ini file, replacing `pathtoscript` with the path to the script.
 ```
 [module/lights]
 type = custom/text
 content = "󰌵"
-click-left = rofi -modi mymenu:/home/murad/.config/Scripts/hue.py -show mymenu -show-icons
+click-left = rofi -modi mymenu:/pathtoscript/hue.py -show mymenu -show-icons
 ```
