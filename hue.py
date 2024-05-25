@@ -87,8 +87,8 @@ class ToggleLight(rofi_menu.Item):
         return (lightOnSymbol if GetLightState(self.light)["on"]["on"] else lightOffSymbol) + " " + self.lightState["metadata"]["name"]
 
 
-menu_items = [OnAllLights(lightOnSymbol + " Turn on all lights"),
-        OffAllLights(lightOffSymbol + " Turn off all lights")]
+menu_items = [OnAllLights("Turn on all lights"),
+        OffAllLights("Turn off all lights")]
 
 for light in GetAllRoomLights(room):
     toggleLight = ToggleLight()
