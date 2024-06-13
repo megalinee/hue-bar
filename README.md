@@ -18,7 +18,10 @@ To get the proper API keys you must go to the following link and make an account
 https://developers.meethue.com/develop/hue-api-v2/getting-started/
 
 Once you've made an account follow along the steps on the website to get your Hue bridge IP & username.
-Paste these values into the matching variables at the top of the hue.py file
+Paste these values into the matching variables at the top of the hue.py file<br />
+
+Use the following curl command to retrieve username:<br />
+`curl --request POST --data '{"devicetype":"linux#huebar", "generateclientkey":true}' https://<Hue IP>/api -k`
 
 Your room name will be the same name as what you set it on your other devices
 
