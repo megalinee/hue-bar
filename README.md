@@ -1,5 +1,5 @@
 # hue-bar
-hue-bar is a Rofi-based Philips Hue light controller intended for use with Rofi.
+hue-bar is a Rofi-based Philips Hue light controller
 
 ![alt text](rofi-view.png)
 
